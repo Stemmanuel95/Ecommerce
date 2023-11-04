@@ -1,27 +1,19 @@
-from flask import Flask, request, jsonify, render_template
+from flask import Flask
 import mysql.connector
+from routes import *
+
+app = Flask(__name__)
 
 db_configuration = {
-    host="localhost",
-    user="root",
-    passwd='welcome1', 
-    database='ecommerce'
+    'host': 'localhost',
+    'user': 'Emmanuel',
+    'passwd': 'emmanuel_2022',
+    'database': 'ecommerce'
 }
 
 conn = mysql.connector.connect(**db_configuration)
 
 cursor = conn.cursor()
-
-app = Flask(__name__)
-
-
-@app.route('/home')
-def home():
-    return render_template('home.html')
-
-@app.route('/login')
-def home():
-    return render_template('login.html')
 
 
 cursor.close()
