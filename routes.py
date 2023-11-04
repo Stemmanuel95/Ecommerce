@@ -1,4 +1,5 @@
 from flask import request, render_template, url_for, redirect
+from app import app
 
 @app.route('/index')
 def index():
