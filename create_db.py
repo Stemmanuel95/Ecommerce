@@ -6,8 +6,8 @@ import mysql.connector
 
 mydb = mysql.connector.connect(
     host="localhost",
-    user="root",
-    passwd='welcome1',
+    user="Emmanuel",
+    passwd='emmanuel_2022',
     database='ecommerce'
 )
 
@@ -21,7 +21,12 @@ mycursor.execute("""CREATE TABLE IF NOT EXISTS Users (
                  Password VARCHAR(255) NOT NULL,
                  Email VARCHAR(255) NOT NULL,
                  Country VARCHAR(255),
-                 City VARCHAR(255)
+                 City VARCHAR(255),
+                 First_name VARCHAR(255),
+                 Last_name VARCHAR(255),
+                 Phone_number VARCHAR(20),
+                 Profile_picture BLOB,
+                 Address VARCHAR(255)
                  )
                  """)
 
@@ -29,7 +34,11 @@ mycursor.execute("""CREATE TABLE IF NOT EXISTS Products (
                  Product_id INT AUTO_INCREMENT PRIMARY KEY,
                  Product_name VARCHAR(255) NOT NULL,
                  Price DECIMAL (10,2) NOT NULL,
-                 Category VARCHAR(255)
+                 Category VARCHAR(255),
+                 Description VARCHAR(255),
+                 Image_url VARCHAR(255),
+                 Stock_quantity INT,
+                 Manufacturer VARCHAR(100)
                  )
                  """)
 
