@@ -1,0 +1,4 @@
+mysql_host: 'localhost'
+mysql_user: 'Emmanuel'
+mysql_password: 'emmanuel_2022'
+mysql_database: 'ecommerce'

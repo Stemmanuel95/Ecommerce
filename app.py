@@ -1,25 +1,26 @@
 from flask import Flask
-import mysql.connector
+from flask_mysqldb import MySQL
+import yaml
 
 app = Flask(__name__)
 
-db_configuration = {
-    'host': 'localhost',
-    'user': 'Emmanuel',
-    'passwd': 'emmanuel_2022',
-    'database': 'ecommerce'
-}
+with open('db.yaml','r') as config_file:
+    db = yaml.safe_load(config_file)
 
-conn = mysql.connector.connect(**db_configuration)
+#db = yaml.load(open('db.yaml'))
 
-cursor = conn.cursor()
+app.config['MYSQL_USER'] = db['mysql_user']
+app.config['MYSQL_PASSWORD'] = db['mysql_password']
+app.config['MYSQL_DATABASE'] = db['mysql_database']
+app.config['MYSQL_HOST'] = db['mysql_host']
+
+mysql = MySQL(app)
+
+# cursor = mysql.connection.cursor()
+
 
 from routes import *
 
-if __name__ == '__main__':
-    app.run(debug=True)
-
-# cursor.close()
-# conn.close()
-
+# if __name__ == '__main__':
+#     app.run(debug=True)
 

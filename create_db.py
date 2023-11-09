@@ -2,20 +2,23 @@
 """Creating my database instance
 for the ecommerce application"""
 
-import mysql.connector
+#from flask import Flask
+from app import app
+from flask_mysqldb import MySQL
 
-mydb = mysql.connector.connect(
-    host="localhost",
-    user="Emmanuel",
-    passwd='emmanuel_2022',
-    database='ecommerce'
-)
 
-mycursor = mydb.cursor()
+# app.config['MYSQL_DATABASE_USER'] = 'Emmanuel'
+# app.config['MYSQL_DATABASE_PASSWORD'] = 'emmanuel_2022'
+# app.config['MYSQL_DATABASE_DB'] = 'ecommerce'
+# app.config['MYSQL_DATABASE_HOST'] = 'localhost'
+
+mysql = MySQL(app)
+
+cursor = mysql.connection.cursor()
 
 # Creating my primary database tables for the ecommerce application
 
-mycursor.execute("""CREATE TABLE IF NOT EXISTS Users (
+create_users_table = """CREATE TABLE IF NOT EXISTS Users (
                  User_id INT AUTO_INCREMENT PRIMARY KEY,
                  User_name VARCHAR(255) NOT NULL,
                  Password VARCHAR(255) NOT NULL,
@@ -28,9 +31,9 @@ mycursor.execute("""CREATE TABLE IF NOT EXISTS Users (
                  Profile_picture BLOB,
                  Address VARCHAR(255)
                  )
-                 """)
+                 """
 
-mycursor.execute("""CREATE TABLE IF NOT EXISTS Products (
+create_products_table = """CREATE TABLE IF NOT EXISTS Products (
                  Product_id INT AUTO_INCREMENT PRIMARY KEY,
                  Product_name VARCHAR(255) NOT NULL,
                  Price DECIMAL (10,2) NOT NULL,
@@ -40,18 +43,25 @@ mycursor.execute("""CREATE TABLE IF NOT EXISTS Products (
                  Stock_quantity INT,
                  Manufacturer VARCHAR(100)
                  )
-                 """)
+                 """
 
-mycursor.execute("""CREATE TABLE IF NOT EXISTS Orders (
+create_orders_table = """CREATE TABLE IF NOT EXISTS Orders (
                  Order_id INT AUTO_INCREMENT PRIMARY KEY,
                  User_id INT,
                  Product_id INT,
                  Quantity INT,
                  Total_price DECIMAL (10,2) NOT NULL
                  )
-                 """)
+                 """
 
-# mycursor.execute("SHOW DATABASES")
+# executing the queries created above
 
-mycursor.close()
-mydb.close()
+cursor.execute(create_users_table)
+cursor.execute(create_products_table)
+cursor.execute(create_orders_table)
+
+mysql.connection.commit()
+
+cursor.close()
+
+
