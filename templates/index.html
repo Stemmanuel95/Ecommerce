@@ -11,10 +11,10 @@
         <h1>Welcome to Our E-commerce Store</h1>
         <nav>
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Products</a></li>
+                <li><a href="{{ url_for('index') }}">Home</a></li>
+                <li><a href="{{ url_for('products') }}">Products</a></li>
                 <li><a href="#">Cart</a></li>
-                <li><a href="#">Contact Us</a></li>
+                <li><a href="{{ url_for('contact_us') }}">Contact Us</a></li>
             </ul>
         </nav>
     </header>
