@@ -17,3 +17,7 @@ def contact_us():
 @app.route('/Products')
 def products():
     return render_template('product_list.html')
+
+@app.route('/Cart')
+def cart():
+    return render_template('cart.html')
