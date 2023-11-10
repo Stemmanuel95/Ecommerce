@@ -7,24 +7,33 @@
     <link rel="stylesheet" type="text/css" href="static/css/style.css">
 </head>
 <body>
-    <header>
-        <h1>Welcome to Our E-commerce Store</h1>
+    <header class="hero-header">
+        <div class="hero-background"></div>
+        <h1>Welcome to Globalticket</h1>
         <nav>
             <ul>
                 <li><a href="{{ url_for('index') }}">Home</a></li>
                 <li><a href="{{ url_for('products') }}">Products</a></li>
-                <li><a href="#">Cart</a></li>
+                <li><a href="{{ url_for('cart') }}">Cart</a></li>
                 <li><a href="{{ url_for('contact_us') }}">Contact Us</a></li>
             </ul>
         </nav>
     </header>
+
+    <section class="hero-section">
+        <h2>Discover Amazing Products</h2>
+        <p>Find the latest and greatest products at Globalticket.</p>
+        <a href="{{ url_for('products') }}" class="explore-button">Explore Now</a>
+    </section>
+
     <section class="product-list">
         <article class="product">
             <img src="static/images/laptop-img.png" alt="Product 1">
-            <h2>Product 1</h2>
+            <h2>Laptop</h2>
             <p>HP envy 2022 edition</p>
             <p>Price: $10.00</p>
             <button>Add to Cart</button>
+            <button>See More</button>
         </article>
         <article class="product">
             <img src="static/images/Macbook.jpg" alt="Product 2">
@@ -32,11 +41,22 @@
             <p>Macbook 2022</p>
             <p>Price: $399.00</p>
             <button>Add to Cart</button>
+            <button>See More</button>
         </article>
-        <!-- Add more product entries as needed -->
+        
+        <!new products-->
+        <article class="product">
+            <img src="static/images/Macbook.jpg" alt="Product 2">
+            <h2>Product 2</h2>
+            <p>Macbook 2022</p>
+            <p>Price: $399.00</p>
+            <button>Add to Cart</button>
+            <button>See More</button>
+        </article>
+        
     </section>
     <footer>
-        <p>&copy; 2023 Your E-commerce Store</p>
+        <p>&copy; 2023 Globalticket</p>
     </footer>
 </body>
 </html>
