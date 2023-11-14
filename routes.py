@@ -21,3 +21,11 @@ def products():
 @app.route('/Cart')
 def cart():
     return render_template('cart.html')
+
+@app.route('/Account')
+def account():
+    return render_template('login.html')
+
+@app.route('/Logout')
+def logout():
+    return render_template('logout.html')
