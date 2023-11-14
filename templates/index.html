@@ -9,10 +9,12 @@
 <body>
     <header class="hero-header">
         <link rel="icon" href="static/images/logo1.png" type="image/gif" />
-        <div class="hero-background"></div>
+        <div class="logo-container">
         <a href="{{ url_for('index') }} class="logo">
             <img src="static/images/logo1.png" alt="Globalticket Logo">
         </a>
+        </div>
+    <div class="header-content">
         <h1>Welcome to Globalticket</h1>
         <nav>
             <ul>
@@ -20,11 +22,13 @@
                 <li><a href="{{ url_for('products') }}">Products</a></li>
                 <li><a href="{{ url_for('cart') }}">Cart</a></li>
                 <li><a href="{{ url_for('contact_us') }}">Contact Us</a></li>
+                <li><a href="{{ url_for('account') }}">Account</a></li>                
             </ul>
         </nav>
+    </div>
     </header>
 
-    <section class="hero-section">
+    <section class="hero-section hero-section-index">
         <h2>Discover Amazing Products</h2>
         <p>Find the latest and greatest products at Globalticket.</p>
         <a href="{{ url_for('products') }}" class="explore-button">Explore Now</a>
