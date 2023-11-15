@@ -7,6 +7,7 @@
     <link rel="stylesheet" type="text/css" href="static/css/style.css">
 </head>
 <body>
+    <!--Header logo-->
     <header class="hero-header">
         <link rel="icon" href="static/images/logo1.png" type="image/gif" />
         <div class="logo-container">
@@ -14,8 +15,9 @@
             <img src="static/images/logo1.png" alt="Globalticket Logo">
         </a>
         </div>
-    <div class="header-content">
-        <h1>Welcome to Globalticket</h1>
+
+    <!--Navigation tabs on the site-->
+    <div class="header-content">       
         <nav>
             <ul>
                 <li><a href="{{ url_for('index') }}">Home</a></li>
@@ -25,15 +27,19 @@
                 <li><a href="{{ url_for('account') }}">Account</a></li>                
             </ul>
         </nav>
+    
     </div>
     </header>
-
+    
+    <!--Introduction header-->
     <section class="hero-section hero-section-index">
+        <h1>Welcome to Globalticket</h1>
         <h2>Discover Amazing Products</h2>
         <p>Find the latest and greatest products at Globalticket.</p>
         <a href="{{ url_for('products') }}" class="explore-button">Explore Now</a>
     </section>
 
+    <!--List of available products on the site-->
     <section class="product-list-index">
         <article class="product-index">
             <img src="static/images/laptop-img.png" alt="Product 1">
@@ -61,6 +67,8 @@
         </article>
         
     </section>
+
+    <!--Brief section about us-->
     <section class="about-section">
         <h2>We Provide the Best for you</h2>
         <p>
@@ -70,6 +78,7 @@
 
     </section>
 
+    <!--Benefits section-->
     <section class="benefits-section">
         <h2>Why Choose Globalticket</h2>
         <ul>
@@ -81,6 +90,7 @@
         </ul>
     </section>
 
+    <!--Category of services we deal with -->
     <section class="categories-section">
         <h2>Explore Our Categories</h2>
         <div class="category">
@@ -97,6 +107,7 @@
         </div>
     </section>
 
+    <!--Section for testimonials -->
     <section class="testimonials-section">
         <h2>What Our Customers Say</h2>
         <div class="testimonial">
@@ -109,7 +120,7 @@
         </div>
     </section>
 
-    <!-- 8. Call-to-Action Section -->
+    <!--Call-to-Action Section -->
     <section class="cta-section">
         <h2>Ready to Shop?</h2>
         <p>Explore our products and experience the best in online shopping. Join Globalticket today!</p>
