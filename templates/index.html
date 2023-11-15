@@ -34,8 +34,8 @@
         <a href="{{ url_for('products') }}" class="explore-button">Explore Now</a>
     </section>
 
-    <section class="product-list">
-        <article class="product">
+    <section class="product-list-index">
+        <article class="product-index">
             <img src="static/images/laptop-img.png" alt="Product 1">
             <h2>Laptop</h2>
             <p>HP envy 2022 edition</p>
@@ -43,7 +43,7 @@
             <button>Add to Cart</button>
             <button>See More</button>
         </article>
-        <article class="product">
+        <article class="product-index">
             <img src="static/images/Macbook.jpg" alt="Product 2">
             <h2>Product 2</h2>
             <p>Macbook 2022</p>
@@ -51,9 +51,7 @@
             <button>Add to Cart</button>
             <button>See More</button>
         </article>
-        
-        <!new products-->
-        <article class="product">
+        <article class="product-index">
             <img src="static/images/mobile-img.png" alt="Product 3">
             <h2>Product 3</h2>
             <p>Mobile Phones</p>
@@ -63,6 +61,61 @@
         </article>
         
     </section>
+    <section class="about-section">
+        <h2>We Provide the Best for you</h2>
+        <p>
+            Welcome to Globalticket, your go-to destination for the latest for the latest and best products. 
+            <br>We are committed to providing high-quality items and exceptional service to our customers.
+        </p>
+
+    </section>
+
+    <section class="benefits-section">
+        <h2>Why Choose Globalticket</h2>
+        <ul>
+            <li>Wide Selection of Products</li>
+            <li>Quality Assurance</li>
+            <li>Secure Online Shopping</li>
+            <li>Fast and Reliable Delivery</li>
+            <li>Responsive Customer Support</li>
+        </ul>
+    </section>
+
+    <section class="categories-section">
+        <h2>Explore Our Categories</h2>
+        <div class="category">
+            <img src="static/images/category1.jpg" alt="Category 1">
+            <p>Electronics</p>
+        </div>
+        <div class="category">
+            <img src="static/images/category2.jpg" alt="Category 2">
+            <p>Clothing</p>
+        </div>
+        <div class="category">
+            <img src="static/images/category3.jpg" alt="Category 3">
+            <p>Home & Living</p>
+        </div>
+    </section>
+
+    <section class="testimonials-section">
+        <h2>What Our Customers Say</h2>
+        <div class="testimonial">
+            <p>"Amazing products and excellent service! Will definitely shop here again."</p>
+            <p>- John Doe</p>
+        </div>
+        <div class="testimonial">
+            <p>"Globalticket exceeded my expectations. Fast delivery and great prices!"</p>
+            <p>- Jane Smith</p>
+        </div>
+    </section>
+
+    <!-- 8. Call-to-Action Section -->
+    <section class="cta-section">
+        <h2>Ready to Shop?</h2>
+        <p>Explore our products and experience the best in online shopping. Join Globalticket today!</p>
+        <a href="{{ url_for('products') }}" class="explore-button">Start Shopping</a>
+    </section>
+
     <footer>
         <p>&copy; 2023 All rights Reserved by Globalticket</p>
     </footer>
