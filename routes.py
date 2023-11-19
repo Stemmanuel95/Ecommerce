@@ -55,6 +55,10 @@ def account():
 def logout():
     return render_template('logout.html')
 
+@app.route('/Graphic_designs')
+def graphic_designs():
+    return render_template('graphic_designs.html')
+
 """Checking if user details exist and allowing already existing clients to login"""
 @app.route('/login', methods=['GET', 'POST'])
 def login():
