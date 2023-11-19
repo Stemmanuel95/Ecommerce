@@ -3,21 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="static/images/logo1.png" type="image/gif" />
     <title>Globalticket website</title>
     <link rel="stylesheet" type="text/css" href="static/css/style.css">
 </head>
 <body>
-    <!--Header logo-->
-    <header class="hero-header">
-        <link rel="icon" href="static/images/logo1.png" type="image/gif" />
+    <header>
+        <!--Header logo-->
+    <!-- <header class="hero-header">
+        <link rel="icon" href="static/images/logo.png" type="image/gif" />
         <div class="logo-container">
         <a href="{{ url_for('index') }}" class="logo">
-            <img src="static/images/logo1.png" alt="Globalticket Logo">
+            <img src="static/images/logo.png" alt="Globalticket Logo">
         </a>
-        </div>
+        </div> -->
+
+        <div class="logo-container">
+            <a href="{{ url_for('index') }}" class="logo">
+                <img src="static/images/logo.png" alt="Globalticket Logo">
+            </a>
+            </div>
 
     <!--Navigation tabs on the site-->
-    <div class="header-content">       
+    <div class="header-content-alignment">       
         <nav>
             <ul>
                 <li><a href="{{ url_for('index') }}">Home</a></li>
@@ -30,6 +38,8 @@
     
     </div>
     </header>
+    
+    
     
     <!--Introduction header-->
     <section class="hero-section hero-section-index">
@@ -50,12 +60,13 @@
             <button>See More</button>
         </article>
         <article class="product-index">
-            <img src="static/images/Macbook.jpg" alt="Product 2">
-            <h2>Product 2</h2>
-            <p>Macbook 2022</p>
+            <img src="static/images/Macbook.jpg" alt="Graphic designs">
+            <h2>Graphic design Solutions</h2>
+            <p>Flyers</p>
             <p>Price: $399.00</p>
-            <button>Add to Cart</button>
-            <button>See More</button>
+            <!-- <button>Add to Cart</button> -->
+            <!-- <button>See More</button> -->
+            <a href="{{ url_for('graphic_designs') }}" class="explore-button">See Samples</a>
         </article>
         <article class="product-index">
             <img src="static/images/mobile-img.png" alt="Product 3">
@@ -128,6 +139,10 @@
     </section>
 
     <footer>
+        <h3>Globalticket</h3>
+            <p>Paradise Residential Area, Accra, Ghana</p>
+            <p>Email: info@globalticket.com</p>
+            <p>Phone: +233 209-500-133</p>
         <p>&copy; 2023 All rights Reserved by Globalticket</p>
     </footer>
 </body>
