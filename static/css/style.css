@@ -14,19 +14,22 @@ header {
 }
 
 header h1 {
-    font-size: 24px;
+    font-size: 20px;
 }
 
 /* Style the navigation menu */
 nav ul {
     list-style-type: none;
     text-align: right;
-    font-size: 20px;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
 }
 
 nav ul li {
-    display: inline;
+    display: block;
     margin-right: 20px;
+    margin-bottom: 10px;
 }
 
 nav a {
@@ -51,7 +54,8 @@ nav li a:hover {
     padding: 10px;
     margin: 10px;
     text-align: center;
-    max-width: 200px;
+    max-width: 100px;
+    box-sizing: border-box;
     background-color: #f9f9f9;
 }
 
@@ -99,7 +103,7 @@ nav li a:hover {
 /* Style the footer for the index.html page */
 body footer {
     text-align: center;
-    padding: 10px 0;
+    padding: 10px;
     background-color: #313958;
     color: #fff; /*colour for the footer text>*/
 }
@@ -200,7 +204,7 @@ button:hover {
 
 .graphics h1 {
     color:#fff;
-    font-size: 36px;
+    font-size: 16px;
 }
 
 .graphics p{
@@ -208,7 +212,7 @@ button:hover {
 }
 
 .hero-section h2 {
-    font-size: 36px;
+    font-size: 18px;
     margin-bottom: 20px;
     margin-top: 50px;
     color: #ffcc00;
@@ -216,7 +220,7 @@ button:hover {
 
 .hero-section p {
     font-size: 18px;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
     margin-top: 20px;
     color: #ffcc00;
 }
