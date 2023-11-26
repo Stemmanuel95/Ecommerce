@@ -52,11 +52,11 @@
     <!--List of available products on the site-->
     <section class="product-list-index">
         <article class="product-index">
-            <img src="static/images/travel-still-life-pack.jpg" alt="Product 1">
+            <img src="static/images/travel-still-life-pack.jpg" alt="Accessories">
             <h2>IT Accessories</h2>
             <p>Laptops/Electrical Gadgets etc..</p>
-            <button>Add to Cart</button>
-            <button>See More</button>
+            <!-- <button>See More</button> -->
+            <a href="{{ url_for('products') }}" class="explore-button">Check them out</a>
         </article>
         <article class="product-index">
             <img src="static/images/abstract-banner-lego-art-poster-design.jpg" alt="Graphic designs">
@@ -68,12 +68,10 @@
             <a href="{{ url_for('graphic_designs') }}" class="explore-button">See Samples</a>
         </article>
         <article class="product-index">
-            <img src="static/images/mobile-img.png" alt="Product 3">
-            <h2>Product 3</h2>
-            <p>Mobile Phones</p>
-            <p>Price: $270.00</p>
-            <button>Add to Cart</button>
-            <button>See More</button>
+            <img src="static/images/programming-background-collage.jpg" alt="Product 3">
+            <h2>Software Development</h2>
+            <p>Consultancy Services for Software Development</p>
+            <button>Speak to US</button>
         </article>
         
     </section>
