@@ -165,7 +165,8 @@ button:hover {
 
 
 .hero-section-index {
-    background-image: url('/static/images/black-friday-sales-arrangement-with-shopping-cart.jpg');
+    /* background-image: url('/static/images/black-friday-sales-arrangement-with-shopping-cart.jpg'); */
+    background-image: url('/static/images/top-view-work-desk-with-coffee-keyboard.jpg');
     background-size: cover;
     color: #fff;
     text-align: center;
